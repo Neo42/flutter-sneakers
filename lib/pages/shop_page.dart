@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce/components/bottom_nav_bar.dart';
+import 'package:flutter_ecommerce/components/shoe_tile.dart';
+import 'package:flutter_ecommerce/models/shoe.dart';
 
 class ShopPage extends StatefulWidget {
   const ShopPage({super.key});
@@ -69,10 +71,33 @@ class _ShopPageState extends State<ShopPage> {
         ),
 
         const SizedBox(height: 10),
+        Expanded(
+          child: ListView.builder(
+              itemCount: 4, // hard, forgot itemCount causing debugger hanging
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                Shoe shoe = Shoe(
+                  name: 'KD',
+                  price: '240',
+                  description: 'cool shoe',
+                  imagePath: 'lib/images/kd.webp',
+                );
+                return ShoeTile(
+                  shoe: shoe,
+                );
+              }),
+        ),
 
-        Expanded(child: ListView.builder(itemBuilder: ((context, index) {
-          return ShoeTile();
-        }))),
+        const Padding(
+          padding: EdgeInsets.only(
+            top: 25.0,
+            left: 25.0,
+            right: 25.0,
+          ),
+          child: Divider(
+            color: Colors.white,
+          ),
+        ),
       ],
     );
   }
