@@ -2,5 +2,4 @@
 
 Built with Flutter
 
-![](./screenshots//screenshot-1.png)
-![](./screenshots/screenshot-2.png)
+<img src="./screenshots//screenshot-1.png" height="400em" /><img src="./screenshots//screenshot-2.png" height="400em" />
