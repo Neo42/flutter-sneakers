@@ -44,11 +44,35 @@ class _ShopPageState extends State<ShopPage> {
         ),
 
         // hot picks
-        Row(
-          children: [
-            Text("Hot Picks 🔥"),
-          ],
-        )
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 25.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Text(
+                "Hot Picks 🔥",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24,
+                ),
+              ),
+              Text(
+                "See all",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue,
+                ),
+              ),
+            ],
+          ),
+        ),
+
+        const SizedBox(height: 10),
+
+        Expanded(child: ListView.builder(itemBuilder: ((context, index) {
+          return ShoeTile();
+        }))),
       ],
     );
   }
