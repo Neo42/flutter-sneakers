@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce/components/bottom_nav_bar.dart';
 import 'package:flutter_ecommerce/components/shoe_tile.dart';
 import 'package:flutter_ecommerce/models/cart.dart';
 import 'package:flutter_ecommerce/models/shoe.dart';
@@ -20,7 +19,7 @@ class _ShopPageState extends State<ShopPage> {
     // alert user added successfully
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
+      builder: (context) => const AlertDialog(
         title: Text("Successfully added!"),
         content: Text("Check your card."),
       ),
